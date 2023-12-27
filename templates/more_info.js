@@ -159,6 +159,7 @@ export default () => {
             "uri": "http://linecorp.com/"
           },
           "height": "sm",
+          "style": "secondary",
           "offsetBottom": "sm"
         }
       ]
