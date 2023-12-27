@@ -5,7 +5,6 @@ import { scheduleJob } from 'node-schedule'
 
 // 檔案、指令匯入
 import magazine from './commands/magazine.js'
-import category_select from './commands/category_select.js'
 import quick_reply_C from './commands/quick_reply_C.js'
 import current from './commands/current.js'
 import moreInfo from './commands/moreInfo.js'
@@ -35,9 +34,6 @@ bot.on('message', event => {
 
     if (userInput === "當期月刊") {
       magazine(event)
-    }
-    else if (userInput === "藝文類別") {
-      category_select(event)
     }
     else if (userInput.includes("當期活動")) {
       quick_reply_C(event)
