@@ -52,6 +52,7 @@ export default () => {
           text: "胡克敏紀念館",
           color: "#aaaaaa",
           size: "xs",
+          wrap: true,
           offsetBottom: "sm"
         }
       ],

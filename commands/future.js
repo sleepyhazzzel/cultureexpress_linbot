@@ -1,13 +1,14 @@
 import culture_express_json from "../data/culture_express.json" assert { type: 'json' }
 import template from '../templates/multi_cards.js'
 
-export default async (event, select_day, userInput) => {
+export default async (event, select_date, userInput) => {
   try {
     // 抓現在日期
     const now = new Date()
     const year = now.getFullYear()
     const month = (now.getMonth() + 1).toString().padStart(2, "0")
-    const date = now.getDate().toString().padStart(2, "0")
+    const day = now.getDate().toString().padStart(2, "0")
+    const date = new Date(`${year}-${month}-${day}`)
 
     const data = culture_express_json
     const img_url = []
@@ -35,20 +36,18 @@ export default async (event, select_day, userInput) => {
 
     data.forEach((item, index) => {
       if (item.ImageFile !== null) {
-        let start = item.StartDate.split(" ")[0].split("-")
-        let end = item.EndDate.split(" ")[0].split("-")
+        let start = new Date(item.StartDate.split(" ")[0])
+        let end = new Date(item.EndDate.split(" ")[0])
         let input = userInput.slice(0, -2)
-        if (select_day !== null) {
-          // { date: '2024-01-01' }
-          let select_year = select_day.date.split("-")[0]
-          let select_month = select_day.date.split("-")[1]
-          let select_date = select_day.date.split("-")[2]
-          if (select_year <= end[0] && select_month <= end[1] && select_date <= end[2] && select_year >= start[0] && select_month >= start[1] && select_date >= start[2]) {
+        if (select_date !== null) {
+          // select_date = { date: '2024-01-01' }
+          let select_day = new Date(select_date.date)
+
+          if (select_day < end && select_day > start) {
             push_arr(item, index)
           }
         } else if (item.Category.includes(input)) {
-          if (year <= start[0] && month <= start[1] && date < start[2]) {
-            console.log(start)
+          if (date < end && date > start) {
             push_arr(item, index)
           }
         }

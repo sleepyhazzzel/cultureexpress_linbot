@@ -10,7 +10,8 @@ export default async (event, type) => {
     const now = new Date()
     const year = now.getFullYear()
     const month = (now.getMonth() + 1).toString().padStart(2, "0")
-    const date = now.getDate().toString().padStart(2, "0")
+    const day = now.getDate().toString().padStart(2, "0")
+    const date = new Date(`${year}-${month}-${day}`)
 
     // 定義各類別資料
     const img_url = []
@@ -26,15 +27,11 @@ export default async (event, type) => {
         // 如果沒有圖片檔案，跳過這個迴圈
         if (item.ImageFile !== null) {
 
-          let start = item.StartDate.split(" ")[0].split("-")
-          let end = item.EndDate.split(" ")[0].split("-")
-          // 在 json 裡 => "EndDate": "2024-02-25 17:00:00"
-          // end = [year, month, date]
-          // end[0] = year
+          let start = new Date(item.StartDate.split(" ")[0])
+          let end = new Date(item.EndDate.split(" ")[0])
 
           // 如果現在的日期在展覽期間
-          if (year <= end[0] && month <= end[1] && date <= end[2] &&
-            year >= start[0] && month >= start[1] && date >= start[2]) {
+          if (date < end && date > start) {
 
             // 檔案 push 進陣列
             img_url.push(item.ImageFile)
