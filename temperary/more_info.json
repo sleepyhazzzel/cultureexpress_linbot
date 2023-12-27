@@ -1,0 +1,165 @@
+{
+  "type": "bubble",
+  "size": "mega",
+  "hero": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "image",
+        "url": "https://cultureexpress.taipei/UploadPlugin?file=%2fw6lriPeTD4Ry1335WB013iudVID9zBDN7rgVPnkVXwT%2fUz0w4fdIKUAv3NVyJD6bwFqIh%2fiXy%2fSUWahcVCa3Ke8PGSZibQRq6TyCZEK%2bJE%3d",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "20:13",
+        "gravity": "center"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [],
+        "position": "absolute",
+        "background": {
+          "type": "linearGradient",
+          "angle": "0deg",
+          "endColor": "#00000000",
+          "startColor": "#00000099"
+        },
+        "width": "100%",
+        "height": "50%",
+        "offsetBottom": "0px",
+        "offsetStart": "0px",
+        "offsetEnd": "0px"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "【表演工作坊】《隱藏的寶藏》",
+            "color": "#ffffff",
+            "size": "lg",
+            "weight": "bold",
+            "wrap": true
+          },
+          {
+            "type": "text",
+            "text": "台北表演藝術中心",
+            "color": "#ffffff",
+            "size": "sm"
+          }
+        ],
+        "position": "absolute",
+        "offsetBottom": "0px",
+        "offsetStart": "0px",
+        "offsetEnd": "0px",
+        "paddingBottom": "15px",
+        "paddingStart": "20px",
+        "paddingEnd": "20px"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "表演藝術",
+            "size": "xs",
+            "color": "#ffffff"
+          }
+        ],
+        "position": "absolute",
+        "width": "70px",
+        "height": "25px",
+        "backgroundColor": "#000000",
+        "cornerRadius": "20px",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "offsetTop": "15px",
+        "offsetStart": "15px"
+      }
+    ],
+    "paddingAll": "0px"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "baseline",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Date",
+            "flex": 1,
+            "size": "sm",
+            "color": "#aaaaaa"
+          },
+          {
+            "type": "text",
+            "text": "2023-12-22 → 2023-12-31",
+            "flex": 5,
+            "size": "sm",
+            "color": "#666666",
+            "wrap": true
+          }
+        ],
+        "spacing": "sm"
+      },
+      {
+        "type": "box",
+        "layout": "baseline",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Time",
+            "flex": 1,
+            "size": "sm",
+            "color": "#aaaaaa"
+          },
+          {
+            "type": "text",
+            "text": "19:30:00-15:50:00",
+            "flex": 5,
+            "size": "sm",
+            "color": "#666666",
+            "wrap": true
+          }
+        ],
+        "spacing": "sm"
+      },
+      {
+        "type": "box",
+        "layout": "baseline",
+        "contents": [
+          {
+            "type": "text",
+            "text": "《隱藏的寶藏》是賴聲川的新喜劇，再次突破舞台空間的用法，向劇場和大稻埕致敬。在一座即將被拆掉的大稻埕老劇場裏，在最後一天的演出中，一面神秘的牆壁撞擊出一段特殊的歷史，暴露出人性百態。賴聲川回歸「戲中戲」手法，將兩千年前的古羅馬喜劇串入後台發生的離奇事件。",
+            "wrap": true,
+            "color": "#666666",
+            "size": "sm"
+          }
+        ]
+      }
+    ],
+    "margin": "lg",
+    "spacing": "sm"
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "WEBSITE",
+          "uri": "https://www.pwshop.com/"
+        },
+        "height": "sm",
+        "offsetBottom": "sm"
+      }
+    ]
+  }
+}
