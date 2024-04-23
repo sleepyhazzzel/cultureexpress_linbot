@@ -7,6 +7,13 @@
 This LINE official account uses Linebot to capture open data and generate replies. <br>
 It allows you to search performances provided by Cultural Express. The information is mainly based on Taipei. <br><br>
 
+> [!IMPORTANT]
+> ***Render Free Web Service:*** <br>
+> It takes a few minutes to call the back-end data when you first enter the web page.<br>
+> ( 網頁資料在第一次進入網頁時需要花幾分鐘從 Render 呼叫後端 )
+
+<br>
+
 ### 🌐 Data Resources
 - Website: https://cultureexpress.taipei
 - JSON: https://cultureexpress.taipei/OpenData/Event/C000003
